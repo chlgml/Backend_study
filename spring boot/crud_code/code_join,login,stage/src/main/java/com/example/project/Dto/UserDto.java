@@ -1,6 +1,5 @@
 package com.example.project.Dto;
 
-import com.example.project.Entity.UserEntity;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
@@ -16,14 +15,6 @@ public class UserDto {
     private String pwd;
 
     private GameDto gameDto;
-
-    public UserEntity toEntity() {
-        UserEntity userEntity = UserEntity.builder()
-                .name(name)
-                .pwd(pwd)
-                .build();
-        return userEntity;
-    }
 
     @Builder
     public UserDto(String name, String pwd, GameDto gameDto){

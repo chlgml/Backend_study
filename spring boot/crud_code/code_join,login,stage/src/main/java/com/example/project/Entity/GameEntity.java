@@ -17,13 +17,13 @@ public class GameEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 2)
+    @Column(nullable = false)
     private Integer Sstage;
 
-    @Column(nullable = false, length = 2)
+    @Column(nullable = false)
     private Integer Cstage;
 
-    @Column(nullable = false, length = 2)
+    @Column(nullable = false)
     private Integer Jstage;
 
 }

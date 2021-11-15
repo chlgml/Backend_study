@@ -5,8 +5,11 @@ import com.example.project.Dto.UserDto;
 import com.example.project.Entity.GameEntity;
 import com.example.project.Entity.UserEntity;
 import com.example.project.Entity.UserRepository;
+import com.example.project.Exception.ConflictException;
 import com.example.project.Exception.NotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.io.NotActiveException;
@@ -15,6 +18,8 @@ import java.io.NotActiveException;
 @Service
 public class UserService {
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
 
     // 회원가입시 회원정보 저장
@@ -22,7 +27,8 @@ public class UserService {
 
         UserEntity userEntity = UserEntity.builder()
                 .name(userdto.getName())
-                .pwd(userdto.getPwd())
+                .pwd(passwordEncoder.encode(userdto.getPwd()))
+                    // 비밀번호를 암호화
                 .gameEntity(
                         GameEntity.builder()
                                 .Jstage(0)
@@ -38,13 +44,21 @@ public class UserService {
 
     // 로그인시 입력한 데이터가 있는지 확인
     public void find(UserDto userdto) throws NotActiveException {
-        userRepository.findByname(userdto.getName())
-                .filter(userEntity -> userEntity.getPwd().equals(userdto.getPwd()))
+
+        // 사용자 name을 통해 레코드 찾기
+        UserEntity userEntity = userRepository.findByname(userdto.getName())
                 .orElseThrow(NotFoundException::new);
+
+        if(!passwordEncoder.matches(userdto.getPwd(), userEntity.getPwd())) {
+                // matches(비교할 비밀번호, db에 저장되어 있는 비밀번호)
+            throw new NotFoundException();
+        }
+
     }
 
     // 사용자 아이디에 맞는 game data를 반환
     public UserDto gameData(UserDto userdto) {
+
         // 사용자 name을 통해 레코드 찾기
         UserEntity userEntity = userRepository.findByname(userdto.getName())
                 .orElseThrow(NotFoundException::new);
@@ -62,6 +76,17 @@ public class UserService {
                 .build();
 
         return userDto;
+    }
+
+    // 아이디 중복 체크
+    public void exists (String name) {
+
+        if(userRepository.existsByname(name)) {
+                    // findByname은 찾을 떄 쓰고 existsByname은 비교할 때 쓴다.
+                    // 아이디를 찾아서  true, false로 받으려면 existsByname을 쓰자.
+            throw new ConflictException();
+        }
+
     }
 
 }
