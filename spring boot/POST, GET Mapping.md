@@ -31,12 +31,6 @@
 
 
 
-POST - @RequestBody
-
-GET - @PathVariable, @RequestParam
-
-
-
 **@RequestBody, @PathVariable, @RequestParam**
 
 @RequestBody, @PathVariable, @RequestParam 이 세가지 모두 클라이언트로부터 데이터를 Controller에서 받아올 수 있도록 도와주는 것이다. 세가지 모두 값을 받아 올 수 있도록 하는 것이지만 언제 사용하는 것일까?
