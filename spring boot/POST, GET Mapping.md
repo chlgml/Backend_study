@@ -42,4 +42,27 @@
 - @PathVariable는 어떤 값을 식별하고 싶으면 사용하고, @RequestParam는 정렬이나 필터링을 할 때 사용한다.
 
   또한 @PathVariable는 패스 파라미터를 사용하기 위해 쓰며, @RequestParam는 쿼리스트링을 하기 위해 쓰인다.
+  
+  - 쿼리 스트링이란,
+  
+    사용자가 입력 데이터를 전달하는 방법중의 하나로, URL 주소에 미리 협의된 데이터를 파라미터를 통해 넘기는 것을 말한다. 
+  
+    URL에서 ?는 쿼리스트링의 시작을 알리며, &를 붙여서 여러 개의 파라미터를 넘길 수 있다.
+  
+    엔드포인트주소/엔드포인트주소?파라미터=값&파라미터=값
+
+```java
+@GetMapping("/search") // 검색
+public PostListResponse FindWriter(@PathParam("writer") String writer) {
+    
+@DeleteMapping("/{commentsid}/elmnt") // 삭제
+public void CommentsNo(@PathVariable("commentsid") Long comments_id) {
+    
+@PostMapping("/post") // 게시글 작성
+public void SavePost(@Valid @RequestBody PostRequest postRequest) {
+    
+@PutMapping // 게시글 수정
+public void UpdateComments (@PathVariable("commentsid") Long comments_id,
+                            @Valid @RequestBody CommentsRequest commentsRequest, String pwd) {
+```
 
