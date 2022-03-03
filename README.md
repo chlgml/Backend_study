@@ -27,9 +27,9 @@ spring boot
   ㄴ login_study
   	   ㄴ code
   	   ㄴ code_study
-  	   		ㄴ controller (1)
-  	   		ㄴ controller (2)
-  	   		ㄴ controller (3)
+  	   	    ㄴ controller (1)
+  	   	    ㄴ controller (2)
+  	   	    ㄴ controller (3)
   ㄴ login_study  	   		
   	   ㄴ password
        ㄴ token
