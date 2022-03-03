@@ -190,32 +190,6 @@ import java util. * // 모든 라이브러리
 >
 > 정수  : int               실수 : double               문자열 : string 
 >
-> > 래퍼 클래스(Wrapper class) : 기본타입의 데이터를 객체로 변환해 주는 클래스
-> >
-> > ​                                                         java.lang 패키지에 포함되어 제공 
-> >
-> > | 기본타입 | 래퍼클래스 |
-> > | :------: | :--------: |
-> > |   long   |    Long    |
-> > |   int    |  Integer   |
-> > |  float   |   Float    |
-> > |  double  |   Double   |
-> > |   char   | Character  |
-> >
-> > 박싱(Boxing)과 언박싱(UnBoxing)
-> >
-> > 박싱 : 기본타입 =>래퍼클래스                언박싱 : 래퍼클래스  =>기본타입
-> >
-> > ``` java
-> > Integer num = new Integer(17); // 박싱
-> > int n = num.intValue();        // 언박싱
-> >  
-> > Character ch = 'X'; //오토박싱
-> > // Character ch = new Character('X'); 
-> > char c = ch; //오토언박싱
-> > // char c = ch.charValue();
-> > 
-> > ```
 
 > 메소드의 정의와 호출
 >
