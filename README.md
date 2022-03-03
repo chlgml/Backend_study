@@ -2,6 +2,7 @@
 
 ```
 concept
+  ㄴ CORS
   ㄴ DB
   ㄴ Http
   ㄴ Rest APi
@@ -11,6 +12,7 @@ java
   ㄴ java정리
   ㄴ Stream
   ㄴ eunm
+  ㄴ wrapper class
   ㄴ 날짜와 시간
   
 spring boot
@@ -33,8 +35,7 @@ spring boot
        ㄴ token
   ㄴ Builber 패턴
   ㄴ DI,IOC
-  ㄴ JPA-Repository
-  ㄴ JPA-영속성 컨텍스트
+  ㄴ JPA
   ㄴ POST,GET Mapping
   ㄴ Spring Boot Class구조
   ㄴ 페이징(Paging) 처리
