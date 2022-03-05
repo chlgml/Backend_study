@@ -50,19 +50,7 @@
 
 
 
-***@PostMapping*** : @RequestMapping(Method=RequestMethod.Post)과 같다.
-
-위에서 @RequestMapping 의 요청받는 방식을 정의하는 것과 비슷한 원리 어떤 요청을 처리할것인지 말하는 것. 여기서는 Post임.
-
-@GetMapping, @PutMapping, @PatchMapping, @DeleteMapping 등 도 있다
-
-
-
 ***@RequiredArgsConstructor*** : final이나 @NonNull인 필드 값만 파라미터로 받는 생성자를 추가한다.
-
-
-
-***@RequestMapping*** : 요청 URL을 어떤 메소드가 처리할지 매핑해준다. 요청 받는 방식을 정의하기도 한다.
 
 
 
@@ -96,34 +84,4 @@
 
 
 
-\- 오버라이딩 : 상위 클래스에 정의된 메소드를 하위 클래스에서 다시 정의하는 것
-
-
-
-***@PathVariable***: 해당 URL에서 {특정값}을 변수로 받아 올 수 있다.
-
-
-
-***@RequestBody*** : 요청이 온 데이터를 바로 Class나 Model로 매핑
-
-
-
 ***@valid***  : 유효성 검증이 필요한 객체임을 지정
-
-
-
-**<@RequestMapping을 쓰지 않고 @PostMapping, @GetMapping처럼 따로 쓰는 이유>**
-
-@RequestMapping을 쓰면 어떤 요청을 할 것인지 정의를 해주어야하기에  코드가 길어진다.
-
-@RequestMapping(method=RequestMethod.Post) -> @PostMapping
-
-그리고 @PostMapping, @GetMapping 등은 각 이름에 맞는  http 메소드의 요청과 URL을 특적 자바 메소드와 매핑하는 기능을 가지고 있음. 
-
-URL을  @PostMapping, @GetMapping 등 옆에 하나 하나 다 써줘야 하는 데 @RequestMapping을 쓰면 생략이되어 편해진다.
-
-
-
-<URL> 네트워크 상에서 자원이 어디있는지 알려주는 규약 -> 웹페이지의 주소
-
-<메소드> 객체의 동작(기능)

@@ -1,4 +1,11 @@
-## POST, GET Mapping
+## Mapping 어노테이션
+
+
+
+***@PostMapping*** : @RequestMapping(Method=RequestMethod.Post)과 같다.
+위에서 @RequestMapping 의 요청받는 방식을 정의하는 것과 비슷한 원리 어떤 요청을 처리할것인지 말하는 것. 여기서는 Post임.
+
+***@GetMapping*** , ***@PutMapping*** , ***@PatchMapping***,  ***@DeleteMapping*** 도 존재함. 위의 설명과 비슷해서 설명 생략
 
 
 
@@ -13,9 +20,23 @@
 @RequestMapping(value ="", Method=RequestMethod.Post); // 또는
 @PostMapping("");
 
-//둘다 가능
+//@PutMapping, @PatchMapping, @DeleteMapping도 위랑 비슷하기 때문에 코드 생략
+
+//모두 가능
 @RequestMapping(value ="");
 ```
+
+
+
+**@RequestMapping을 쓰지 않고 @PostMapping, @GetMapping처럼 따로 쓰는 이유**
+
+@RequestMapping을 쓰면 어떤 요청을 할 것인지 정의를 해주어야하기에  코드가 길어진다.
+
+@RequestMapping(method=RequestMethod.Post) -> @PostMapping
+
+그리고 @PostMapping, @GetMapping 등은 각 이름에 맞는  http 메소드의 요청과 URL을 특적 자바 메소드와 매핑하는 기능을 가지고 있음. 
+
+URL을  @PostMapping, @GetMapping 등 옆에 하나 하나 다 써줘야 하는 데 @RequestMapping을 쓰면 생략이되어 편해진다.
 
 
 
@@ -31,7 +52,19 @@
 
 
 
+**@PatchMapping과 @PutMapping의 차이**
+
+@PatchMapping은 수정했을 때 수정되지 않는 값들은 빈값으로 처리한다. 만약 전체를 수정하는 경우가 아닐때는 나머지 수정하지 않은 값은 빈값으로 처리되는 것이다. @PatchMapping은 @PatchMapping과 다르게 수정되지 않은 값들을 빈값으로 처리하지 않는다. 
+
+그래서 선배께 여쭤봤더니... 회사에 따라 @PatchMapping을 안쓰는 곳이 있다고 한다.
+
+
+
 **@RequestBody, @PathVariable, @RequestParam**
+
+***@RequestBody*** : 요청이 온 데이터를 바로 Class나 Model로 매핑
+
+***@PathVariable***: 해당 URL에서 {특정값}을 변수로 받아 올 수 있다.
 
 @RequestBody, @PathVariable, @RequestParam 이 세가지 모두 클라이언트로부터 데이터를 Controller에서 받아올 수 있도록 도와주는 것이다. 세가지 모두 값을 받아 올 수 있도록 하는 것이지만 언제 사용하는 것일까?
 
