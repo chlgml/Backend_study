@@ -1,19 +1,34 @@
-package com.example.password.Service;
+## PasswordEncoder
 
-import com.example.password.Dto.Dto;
-import com.example.password.Entity.Entity;
-import com.example.password.Entity.Repository;
-import com.example.password.Exception.NotFoundException;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
+
+SecurityConfig
+
+```java
+@Configuration
 @RequiredArgsConstructor
-@org.springframework.stereotype.Service
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+
+    @Bean
+    public PasswordEncoder getPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    } // PasswordEncoder을 생성해주기!
+
+}
+```
+
+
+
+Service
+
+```java
+@RequiredArgsConstructor
+@Service
 public class Service {
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
+    // PasswordEncoder 불러오기
     private final Repository Repository;
 
     public void seve(Dto dto) {
@@ -41,3 +56,9 @@ public class Service {
     }
 
 }
+```
+
+
+
+
+
