@@ -7,35 +7,42 @@ concept
   ㄴ Spring framework
 
 java
-  ㄴ java정리
+  ㄴ java
+  ㄴ List, for each
+  ㄴ OOP
   ㄴ Stream
   ㄴ eunm
   ㄴ wrapper class
   ㄴ 날짜와 시간
   
 spring boot
-  ㄴ Entity_mapping
   ㄴ annotation
-       ㄴ JPA
+       ㄴ @AllArgsConstructor, @NoArgsConstructor, @RequiredArgsConstructor
+       ㄴ @Builber, @Getter
+       ㄴ @NotNull, @NotEmpty, @NotBlank
+       ㄴ @RequestBody, @PathVariable, @RequestParam
+       ㄴ @RequestMapping
+       ㄴ @Size, @Length, @Column
+       ㄴ JPA-annotation
        ㄴ annotation
-       ㄴ 생성자
        ㄴ 지양해야 하는 lombok
   ㄴ crud_code
        ㄴ crud (1)
   ㄴ login_study
   	   ㄴ code
   	   ㄴ code_study
-  	   	    ㄴ controller (1)
-  	   	    ㄴ controller (2)
-  	   	    ㄴ controller (3)
-  ㄴ login_study  	   		
-  	   ㄴ password
+  	   	   ㄴ controller (1)
+  	   	   ㄴ controller (2)
+  	   	   ㄴ controller (3)
+  ㄴ security
        ㄴ token
-  ㄴ Builber 패턴
+           ㄴ JWTcode_study
+           ㄴ 토큰
+       ㄴ PasswordEncoder
   ㄴ DI,IOC
+  ㄴ Entity_mapping
   ㄴ JPA
   ㄴ Key
-  ㄴ POST,GET Mapping
   ㄴ Spring Boot Class구조
   ㄴ 페이징(Paging) 처리
   
