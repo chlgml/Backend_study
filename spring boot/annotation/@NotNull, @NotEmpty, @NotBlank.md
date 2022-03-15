@@ -1,6 +1,4 @@
-### @NotNull, @NotEmpty, @NotBlank 
-
-*********
+## @NotNull, @NotEmpty, @NotBlank 
 
 ***@NotNull*** : null이 아닌지 확인
 
