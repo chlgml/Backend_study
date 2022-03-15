@@ -1,8 +1,4 @@
-## @Pattern, @Valid
-
-
-
-#### @Pattern
+## @Pattern
 
 괄호안의 정규식을 만족하는 지 체크해준다.
 
@@ -45,11 +41,9 @@ E-Mail : ^[a-zA-Z0-9]+@[a-zA-Z0-9]+$
 
 
 
-**********
 
 
-
-#### @valid
+## @valid
 
 위에 있는 어노테이션과 같은 javax.validation 어노테이션이다. 이 어노테이션은 유효성 검증을 해준다. DTO에서 설정한 @NotNull등을 미리 @valid가 객체를 검증해준다.
 
