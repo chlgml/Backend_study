@@ -4,7 +4,7 @@ facade란, 프랑스어 facade에서 유래된 단어로, 건물의 외간이라
 
 일단 아래의 그림을 통해 대강 facade패턴에 대해서 생각해보자.
 
-![image-20220318163323042](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220318163323042.png)
+![](C:\Users\user\Desktop\화면 캡처 2022-03-18 172655.png)
 
 이 그림이 꼭 facade패턴이라고 이해하면 안된다. 이런식으로 구성이 되어있다는 거기때문에 그림에 의존해서 이해하려고 하지 말자...
 
