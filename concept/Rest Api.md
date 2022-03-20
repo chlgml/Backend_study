@@ -1,16 +1,16 @@
-## REST API
+## API
+
+Application Programming Interface의 약자로 컴퓨터나 컴퓨터프로그램 사이의 연결을 뜻한다. (프로그램 - API - 프로그램) 프로그램들이 서로 상호작용하는 것을 도와주는 매개체
 
 
 
-Api란, Application Programming Interface의 약자로 컴퓨터나 컴퓨터프로그램 사이의 연결을 뜻한다. (프로그램 - API - 프로그램) 프로그램들이 서로 상호작용하는 것을 도와주는 매개체
+## REST
+
+웹에서 데이터를 전송하고 처리하는 방법을 정의한 인터페이스이다.  URI를 통해 자원을 명시하고, Method를 통해 자원에 대한 CRUD Operation를 적용한다. 웹에 존재하는 모든 자원에 고유한 ID인 HTTP URI를 부여한다. REST의 형식을 따른 시스템을 Restful이라고 부른다.
 
 
 
-REST란, 웹에서 데이터를 전송하고 처리하는 방법을 정의한 인터페이스이다.  URI를 통해 자원을 명시하고, Method를 통해 자원에 대한 CRUD Operation를 적용한다. 웹에 존재하는 모든 자원에 고유한 ID인 HTTP URI를 부여한다. REST의 형식을 따른 시스템을 Restful이라고 부른다.
-
-
-
-REST의 구성요소
+**REST의 구성요소**
 
 - 자원 (URI)
 
@@ -26,7 +26,7 @@ REST의 구성요소
 
 
 
-REST의 특징
+**REST의 특징**
 
 - 인테페이스 일관성 (Uniform Interface)
 
@@ -54,7 +54,7 @@ REST의 특징
 
 
 
-REST의 장단점
+**REST의 장단점**
 
 - 장점
   - HTTP 프로토콜 인프라를 그대로 사용하므로 별도의 인프라를 구축할 필요가 없다.
@@ -66,11 +66,20 @@ REST의 장단점
 
 
 
-REST API란, REST 방식의 API이다.(위의 설명을 읽었다면 이해할 수 있다.)
+## RAST API
+
+REST 방식의 API이다.(위의 설명을 읽었다면 이해할 수 있다.)
 
 
 
-REST API 설계 방법
+**특징**
+
+- 확장성과 재사용성을 높여 유지보수및 운용을 편리하게 할 수 있다.
+- REST는 HTTP 표준을 기반으로 구현하므로, HTTP를 지원하는 프로그램 언어로 클라이 언트, 서버를 구현할 수 있다.
+
+
+
+**REST API 설계 방법**
 
 - URI는 정보의 자원을 표현한다. 
   - 리소스명은 동사보다는 명사를 사용한다. (컨트롤 자원을 의미하는 URI는 예외적으로 동사 허용)
@@ -85,3 +94,9 @@ REST API 설계 방법
   - GET : 해당 리소스를 조회함
   - DELETE : 리소스를 삭제함
 - HTTP 응답 상태코드를 잘 주어야한다.
+
+
+
+## RESTful
+
+REST의 원리를 따르는 시스템을 RESTful이라고 한다.(REST API의 규칙을 올바르게 지킨 시스템만이 RESTful하다고 할 수 있음) 그리고 RESTAPI를 제공하는 웹 서비스를 RESTful하다고 할 수 있다. 
