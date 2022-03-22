@@ -1,10 +1,15 @@
 ```
 concept
+  ㄴ AOP
   ㄴ CORS
   ㄴ DB
   ㄴ Http
   ㄴ Rest APi
   ㄴ Spring framework
+  
+design pattern
+  ㄴ Facade 패턴
+  ㄴ MVC 패턴
 
 java
   ㄴ java
@@ -19,15 +24,19 @@ spring boot
   ㄴ annotation
        ㄴ @AllArgsConstructor, @NoArgsConstructor, @RequiredArgsConstructor
        ㄴ @Builber, @Getter
+       ㄴ @Controller
+       ㄴ @Data, @ToString, @EqualsAndHashCode
+       ㄴ @Entity, @Repository
        ㄴ @NotNull, @NotEmpty, @NotBlank
+       ㄴ @Pattern, @valid
        ㄴ @RequestBody, @PathVariable, @RequestParam
        ㄴ @RequestMapping
+       ㄴ @RestControllerAdvice, @ExceptionHandler
        ㄴ @Size, @Length, @Column
-       ㄴ JPA-annotation
-       ㄴ annotation
+       ㄴ @SpringBootApplication
+       ㄴ @Transactional
+       ㄴ @slf4j
        ㄴ 지양해야 하는 lombok
-  ㄴ crud_code
-       ㄴ crud (1)
   ㄴ login_study
   	   ㄴ code
   	   ㄴ code_study
@@ -36,7 +45,8 @@ spring boot
   	   	   ㄴ controller (3)
   ㄴ security
        ㄴ token
-           ㄴ JWTcode_study
+           ㄴ jwtcode_study/jwt_study
+           ㄴ class 설명
            ㄴ 토큰
        ㄴ PasswordEncoder
   ㄴ DI,IOC
