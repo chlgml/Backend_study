@@ -96,8 +96,8 @@ Entity끼리는 연관관계를 맺을 수 있는데 이를 '관계형 데이터
 
 단방향이면 @JoinColumn()하고, 양방향이면 @JoinColumn()은 그대로 하고 연관된 Entity에 하나의 필드를 추가해서 연관관계 어노테이션을 붙이고 (mappedBy = "")을 추가 할 것
 
-```
+
+
 1:1매핑을 한 post와 comment라는 두개의 entity가 있다. post에서 comment를 관리하고 싶을때, 즉 post가 주 테이블일때 단방향 매핑을 하려면 post가 자식 테이블이 되어야 한다. 하지만 post가 자식 테이블이 되었을 때 comment가 부모테이블이 되므로 post를 삭제해도 comment를 삭제시킬 수 없다. post가 삭제되면 comment가 삭제 되도록 해야한다면 1:1양방향 매핑을 해줘야 한다.
 
 그리고 @JoinColumn이 있는 쪽이 자식이고 @OneToMany(mappedBy ="")이게 있는게 부모이다!! 헷갈리지 말자!! 그리고 @JoinColumn의 name은 매핑할 entity의 id와 상관 없는 컬럼 이름이다...
-```
