@@ -36,31 +36,30 @@ ex) 자동차는 여러 브랜드의 차가 있지만, 공통적인 행위들이
   캡슐화는 정보은닉과 동일한 개념이 아니다. 캡슐화를 하면 정보를 감출 수 있기 때문에 정보 은닉을 할 수 있다는 특징을 가지고 있는 것이다.
   ```
 
-외부의 접근이로부터 보호된 필드는 setter와 getter를 통해 간접적으로 접근이 가능하다.
 
-getter은 수정,  setter은 불러오기라고 볼 수 있음
+
+**Getter와 Setter**
+
+외부의 접근으로부터 보호된 필드는 setter와 getter를 통해 간접적으로 접근이 가능하다. getter은 불러오기, setter은 수정라고 볼 수 있음
 
 ```java
 public class point {
-	public int xpos;
-	public int ypos;
-}
+    private int fieldName;
+    // 여기서 접근 제한자는 private를 쓴다.
+    // 접근이 클래스 내부밖에 안되서 은닉화를 할 수 있음.
 
-// 위의 코드를 getter을 이용하여 바꾼 코드 
-public class point {
-	private int xpos;
-	// 여기서 접근 제한자는 private를 쓴다.
-	// 접근이 클래스 내부밖에 안되서 은닉화를 할 수 있음.
-	private int ypos;
+		// Getter
+    public int getFieldName() {
+							// get + 필드 이름(첫문자 대문자)
+       return fieldName; // 필드 값을 리턴한다.
+    }
+		// 리턴하는 필드 타입이 boolean일 경우 get이 아닌 is로 시작함
 
-	public int getWidth() {
-  	 // 직접 수정하는 것이 아닌 getter을 이용해서 수정
-	   return xpos;
-	}
-
-	public int getHeight() {
- 	  return ypos;
-	}
+		// Setter
+    public void setFieldName(int fieldName) {
+							// set + 필드 이름(첫문자 대문자)
+      this.fieldName = fieldName;
+    }
 }
 ```
 
