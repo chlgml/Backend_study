@@ -15,7 +15,7 @@ public abstract class BaseTimeEntity extends BaseIdEntity {
 ## (1) @MappedSuperclass
 엔티티에서 공통 속성이 나타나는 경우에 공통엔티티를 추출여 엔티티를 따로 만들어서 사용하는 방법이다. -> 새로운 테이블이 만들어지지않고 속성만  추가된다.
 JPA Entity class들이 해당 어노테이션이 붙은 클래스를 상속하는 경우 해당 클래스의 필드를 컬럼으로 인식하게 함.
-이렇게 만들어진 엔티티는 상속을 통해 사용한다. 
+이렇게 만들어진 엔티티는 상속을 통해 사용한다. -> @MappedSuperclass이 붙은 엔티티의 경우 추상클래스로 만들어서 사용한다. 
 
 
 ## (2) @EntityListeners
