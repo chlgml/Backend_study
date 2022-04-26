@@ -84,16 +84,22 @@ public class Test {
 
  	int a;
  	int b;
- 
- 	public Test() { // 기본 생성자
- 		a = 10;
- 		b = 20;
+
+	/*
+	public Test() { // 기본 생성자
+	}  	
+	// 다른 생성자가 없다면 컴파일러에서 자동 생성해주지만 다른 생성자를 생성했을 경우 따로 생성해주어야함.
+	*/
+
+ 	public Test() { 
+ 		this.a = 10;
+ 		this.b = 20;
  	} 
- 	// 다른 생성자가 없다면 컴파일러에서 자동 생성해주지만 다른 생성자를 생성했을 경우 따로 생성해주어야함.
+
  
- 	public Test(int n1, int n2) { // 생성자 오버로딩
- 		a = n1;
- 		b = n2;
+ 	public Test(int a, int b) { // 생성자 오버로딩
+ 		this.a = a;
+ 		this.b = b;
  	} 
  
  	public void sum() { 
