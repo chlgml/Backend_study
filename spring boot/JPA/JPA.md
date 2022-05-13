@@ -1,8 +1,8 @@
 ## JPA
 
-Java Persistence API의 약자로 java OMR기술에 대한 표준 명세로 java에서 제공하는 API이다.
+Java Persistence API의 약자로 java ORM기술에 대한 표준 명세로 java에서 제공하는 API이다.
 
-- OMR
+- ORM
   
   Object-Relation Mapping의 약자로, 객체-관계 매핑이다. 
   
