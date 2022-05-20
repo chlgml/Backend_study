@@ -11,11 +11,6 @@ public void CommentsNo(@PathVariable("commentsid") --------------- (2)
 public void SavePost(@Valid @RequestBody ------------------------ (3)
     PostRequest postRequest) {
     
-@PostMapping("/post")
-public void SavePost(@RequestPart(value = "file", required = false) MultipartFile multipartFile
-                     @RequestPart(value = "PostRequest") PostRequest postRequest) { --------- (4)
-    
-    
 @PutMapping // 아래와 같이 여러 어노테이션을 같이 쓸 수 있음.
 public void UpdateComments (@PathVariable("commentsid") Long comments_id,
                             @Valid @RequestBody CommentsRequest commentsRequest, String pwd) {
@@ -66,16 +61,3 @@ PathParam도 URL을 통해 값을 넘기는 방법중 하나인데,  엔드포�
 
 
 > GET은 body로 요청을 보내지 못한다. 근데 프론트쪽에서 잘 보냈는데 400이 뜬다고 해서 뭐지? 하고 있었는데 내가 @RequestBody로 설정해놓은 곳에 GETMapping을 하도록 설정해놨던 것이다...!
-
-
-
-## (4) @RequestPart
-
-Controller에서 File을 받을때는 MultipartFile 객체와 @RequestParam을 사용합니다. 하지만 File과 Dto를 같이 받기 위해서는 @RequestPart를 사용해야한다...!!
-
- 
-
-
-
-
-
