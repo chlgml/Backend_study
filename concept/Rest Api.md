@@ -62,11 +62,10 @@ Application Programming Interface의 약자로 컴퓨터나 컴퓨터프로그�
   - 서버와 클라이언트의 역할을 명확하게 분리할 수 있다.
 - 단점
   - REST는 설계 가이드이며, 표준이 아니기 떄문에 명확한 표준이 없다.
-  - HTTP Method 형태가 제한적이다. (사용할 수 있는 Method가 4가지밖에 없다.)
 
 
 
-## RAST API
+## REST API
 
 REST 방식의 API이다.(위의 설명을 읽었다면 이해할 수 있다.)
 
