@@ -38,7 +38,7 @@ Application Programming Interface의 약자로 컴퓨터나 컴퓨터프로그�
 
 - 캐시 가능 (Cacheable)
 
-  웹 표준 HTTP 프로토콜을 그대로 사용하므로, 웹에서 사용하는 기존 인트라를 그래로 활용가능하다. 따라서 HTTP가 가진 캐싱 기능을 적용할 수 있다.
+  웹 표준 HTTP 프로토콜을 그대로 사용하므로, 웹에서 사용하는 기존 인프라를 그래로 활용가능하다. 따라서 HTTP가 가진 캐싱 기능을 적용할 수 있다.
 
 - 자체 표현 구조 (Self-descriptiveness)
 
