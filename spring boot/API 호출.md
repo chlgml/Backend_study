@@ -59,3 +59,40 @@ public class DeliveryUtil {
 #### response 받아오기
 - exchange() : ClientResponse를 상태값을 헤더와 함께 가져옴
 - retrieve() : body 내용을 가져옴
+
+
+
+### OkHttpClient
+RestAPI와 HTTP 통신을 간편하게 하기 위한 'Square'라는 회사가 만든 라이브러리이다.
+- OkHttpClient는 오픈 소스이다.
+
+의존성 추가
+```java
+implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.2.2'
+```
+
+```java
+public void sendMessageTo(String targetToken, String title, String body) {  
+    String message = makeMessage(targetToken, title, body);  
+  
+    OkHttpClient client = new OkHttpClient();  // OkHttpClient 객체 생성
+
+	// RequestBody 생성
+    RequestBody requestBody = RequestBody.create(message, MediaType.get("application/json; charset=utf-8"));
+    
+	// post 객체 생성
+    Request request = new Request.Builder()  
+            .url(API_URL)  
+            .post(requestBody)  
+            .addHeader(HttpHeaders.AUTHORIZATION, "Bearer " + getAccessToken())  
+            .addHeader(HttpHeaders.CONTENT_TYPE, "application/json; UTF-8")  
+            .build();  
+
+	// 요청 전송
+    Response response = client.newCall(request).execute();  
+  
+}
+```
+
+그리고 요청 시에 .execute() 메소드를 꼭 호출에 주어야 한다.
+만약, 비동기로 수행할 것이라면 .execute()이게 아니라 .enqueue() 메소드를 사용해야한다.
