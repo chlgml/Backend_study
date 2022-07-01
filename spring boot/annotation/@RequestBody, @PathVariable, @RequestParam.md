@@ -1,6 +1,6 @@
 ```java
 @GetMapping("/search")
-public PostListResponse FindWriter(@PathParam("writer") ---------- (1)
+public PostListResponse FindWriter(@RequestParam("writer") ---------- (1)
                                    String writer) {
     
 @DeleteMapping("/{commentsid}")
