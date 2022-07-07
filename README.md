@@ -27,20 +27,24 @@ spring boot
 	   ㄴ JPA와 기본생성자
 	   ㄴ Repository
 	   ㄴ 메소드
+	   ㄴ 영속성 전이
+	   ㄴ 영속성 컨텍스트 작동원리와 OSIV
 	   ㄴ 영속성 컨텍스트
-	   ㄴ 작동원리와 OSIV
   ㄴ annotation
        ㄴ @AllArgsConstructor, @NoArgsConstructor, @RequiredArgsConstructor
        ㄴ @Builber, @Getter
        ㄴ @Controller
        ㄴ @Data, @ToString, @EqualsAndHashCode
        ㄴ @Entity, @Repository
+       ㄴ @Jsonlgnore, @JsonProperty
        ㄴ @MappedSuperclass, @EntityListeners
        ㄴ @NotNull, @NotEmpty, @NotBlank
        ㄴ @Override, @Service
        ㄴ @Pattern, @valid
+       ㄴ @PostConstruct, @PreDestroy
        ㄴ @RequestBody, @PathVariable, @RequestParam
        ㄴ @RequestMapping
+       ㄴ @RequestPart, @RequestHeader
        ㄴ @RestControllerAdvice, @ExceptionHandler
        ㄴ @Size, @Length, @Column
        ㄴ @SpringBootApplication
@@ -62,9 +66,11 @@ spring boot
            ㄴ 토큰
        ㄴ PasswordEncoder
        ㄴ Spring Security
+  ㄴ API 호출
   ㄴ DI,IOC
   ㄴ Entity_mapping
   ㄴ Key
+  ㄴ Object Mapper
   ㄴ Spring Boot Class구조
   ㄴ Swagger
   ㄴ 페이징(Paging) 처리
