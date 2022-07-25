@@ -13,9 +13,12 @@ design pattern
   ㄴ MVC 패턴
 
 java
+  ㄴ Jackson 라이브러리
   ㄴ java
   ㄴ List, for each
   ㄴ OOP
+  ㄴ Object Mapper
+  ㄴ Optional 클래스
   ㄴ Stream
   ㄴ eunm
   ㄴ wrapper class
@@ -51,6 +54,10 @@ spring boot
        ㄴ @Transactional
        ㄴ @slf4j
        ㄴ 지양해야 하는 lombok
+  ㄴ function
+		ㄴ API 호출
+		ㄴ Swagger
+		ㄴ 페이징(Paging) 처리
   ㄴ login_study
   	   ㄴ code
   	   ㄴ code_study
@@ -66,15 +73,10 @@ spring boot
            ㄴ 토큰
        ㄴ PasswordEncoder
        ㄴ Spring Security
-  ㄴ API 호출
   ㄴ DI,IOC
   ㄴ Entity_mapping
   ㄴ Key
-  ㄴ Object Mapper
   ㄴ Spring Boot Class구조
-  ㄴ Swagger
-  ㄴ 페이징(Paging) 처리
-  
 ```
 
 
