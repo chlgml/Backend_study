@@ -58,8 +58,14 @@ public UserEntity seveData(UserDto userdto){
 
 **DTO**
 
-Data Transfer Object의 약자로, 계층간의 데이터 교환 역할을 하는 객체이다. Dto를 사용하는 이유는 Entity의 외부 노출을 막기 위해서이며, Entity만 있다면 Entity가 복잡해진다.
+Data Transfer Object의 약자로, 계층간의 데이터 교환 역할을 하는 객체이며 View를 위한 클래스이다.
 
+Dto를 사용하는 이유
+- Entity의 외부 노출을 막기 위해서
+- 클라이언트에 반환해야하는 값이 Entity 필드의 일부이고, 이러한 일이 많다면 Entity가 복잡해질 것이다.
+	- View Layer와 DB Layer의 역할을 분리하기 위함
+- DTO는 자주 변경된다. 반면 Entity는 자주 변경되지 않으며 변경될 시 많은 클래스에 영향을 끼치므로 분리해야한다.
+- 
 
 
 **Entity**
@@ -94,7 +100,7 @@ public class UserEntity {
 
 
 
-**Repository**
+**Repository** (DAO)
 
 DB의 데이터들을 CRUD할 수 있는 인터페이스로 스프링 프레임워크에서 제공하는 jpa처리를 담당하는 Repository를 상속받아 사용한다.
 
@@ -108,3 +114,4 @@ public interface UserRepository extends CrudRepository<UserEntity, Long> {
 }
 ```
 
+DAO란 실제로 DB에 접근하는 객체를 말한다. 
