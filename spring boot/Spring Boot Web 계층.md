@@ -1,5 +1,26 @@
-## Spring Boot Class구조
+## Spring Boot Web 계층 구조
 
+### 1. Web Layer
+-   controller, exception handlers, filter 등
+- 웹 어플리케이션의 최상위에 존재하며, 외부 요청과 응답에 대한 전반적인 영역이다.
+- 어플리케이션의 진입점이기 때문에 다른 레이어에서 발생한 예외도 처리함
+- 인증을 관리하고 권한없는 사용자의 인가를 거부하는 역할
+
+
+### 2. Service Layer
+- service
+- Web Layer 바로 아래 존재하며, 트랜잭션에 대한 경계 역할
+- 어플리케이션과 인프라 서비스를 모두 포함
+
+### 3. Repository Layer
+- Repository
+- 가장 낮은 계층으로 사용되는 데이터 스토리지 계층과 통신하는 역할
+- 데이터베이스와 같이 데이터 저장소(repository)에 접근하는 역할
+
+
+
+## Spring Boot Class구조
+Spring Boot Web 계층 구조와 연관되어 있음
 
 
 Client - Controller - Service - Repository - DB
