@@ -14,7 +14,7 @@
 - begin, commit을 자동으로 수행해준다.
   - commit
     - 모든 작업을 정상적으로 처리하겠다고 확정하는 명령어
-    - 트랜젝션의 처리 과정을 데이터베이스에 반영하기 위해 변령된 내용을 영구 저장
+    - 트랜젝션의 처리 과정을 데이터베이스에 반영하기 위해 변경된 내용을 영구 저장
     - commit 수행하면, 하나의 트랜젝션 과정을 종료하게 된다.
 - 예외 발생시 rollback 처리를 자동으로 수행해준다.
   - rollback
@@ -65,7 +65,7 @@ COMMIT 명령어와 ROLLBACK 명령어의 장점
   @Transactional(propagation=Propagation.REQUIRED) // 이런식으로 설정하면 된다
   ```
 
-  - REQUIRED (Defualt) : 징행중인 트랜잭션이 있다면 해당 트랜잭션의 속성을 따르고, 진행중이 아닐경우 새로운 트랜잭션 생성
+  - REQUIRED (Defualt) : 진행중인 트랜잭션이 있다면 해당 트랜잭션의 속성을 따르고, 진행중이 아닐경우 새로운 트랜잭션 생성
   - REQUIRES_NEW : 항상 새로운 트랜잭션 생성. 실행중인 트랜잭션이 있다면 보류하고 해당 트랜잭션 작업 진행
   - SUPPORT : 이미 진행중인 트랜잭션 속성을 따르고 없다면 트랜잭션 설정하지 않음
   - NOT_SUPPORT : 이미 진행중인 트래잭션이 있다면 보류, 트랜잭셥 없이 작업 수행
@@ -97,4 +97,4 @@ COMMIT 명령어와 ROLLBACK 명령어의 장점
 - readOnly : 트랜잭션을 읽기 전용으로 설정
 
   - true시 insert, update, delete실행시 예외 발생
-  - Default = flase
+  - Default = false
